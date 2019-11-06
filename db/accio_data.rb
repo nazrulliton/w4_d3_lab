@@ -5,14 +5,14 @@ require('pry')
 
 student1 = Student.new({
 'first_name' => "Neville",
-'secound_name' => "Shortbuttocks",
+'second_name' => "Shortbuttocks",
 'house' => "Gryffindor",
 'age' => 11
   })
 
 student2 = Student.new({
 'first_name' => "Crabby",
-'secound_name' => "Mcdoyle",
+'second_name' => "Mcdoyle",
 'house' => "Slytherin",
 'age' => 13
   })
