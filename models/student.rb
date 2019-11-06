@@ -28,6 +28,13 @@ student = SqlRunner.run(sql, values)
 @id = student.first()['id'].to_i
 end
 
+def self.find_by_id (id)
+ sql = "SELECT * FROM students WHERE id = $1"
+ values = [id]
+ student = SqlRunner.run(sql, values)
+ result = Student.new(student.first)
+return result
+end
 
 
 
@@ -37,7 +44,8 @@ def self.all()
   students = SqlRunner.run(sql)
   result = students.map{|student| Student.new(student)}
   return result
-end 
+end
+
 
 
 
